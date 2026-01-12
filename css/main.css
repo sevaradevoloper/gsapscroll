@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 100px;
+    /* background: #f7f2f2; */
+    backdrop-filter: blur(30px);
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.first a {
+    text-decoration: none;
+}
+
+.first a p {
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 99%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.first a p i {
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 300;
+    font-style: italic;
+    color: #7044CC;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 550;
+    font-size: 17px;
+    line-height: 160%;
+    color: #000000;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7044CC;
+}
+
+.header__container button {
+    background-color: #7044CC;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 550;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.hero {
+    padding: 150px 0;
+}
+
+.hero__container{
+    width: 900px;
+}
+.hero__container h1 {
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 700;
+    font-size: 85px;
+    line-height:102%;
+    margin-bottom: 30px;
+    color: #000000;
+    width: 500px;
+}
+
+.hero__container p {
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 160%;
+    color: #677488;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.hero__container button {
+    width: 281px;
+    height: 90px;
+    background: transparent;
+    border: 1px solid #7044CC;
+    border-radius: 125px;
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 550;
+    font-size: 15px;
+    line-height: 231%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 7px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.hero__container button i {
+    width: 76px;
+    height: 76px;
+    background-color: #7044CC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.calculate {
+    padding: 60px 0;
+}
+
+.calculate__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.calculate__items {
+    width: 320px;
+    height: 267px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    transition: 0.4s ease;
+    border-radius: 20px;
+}
+
+.calculate__items h2 {
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 300;
+    font-size: 55px;
+    line-height: 124%;
+    color: #7044CC;
+    margin-bottom: 10px;
+}
+
+.calculate__items p {
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+    color: #000000;
+}
+
+.calculate__items:hover {
+    background-color: #7044CC;
+}
+
+.calculate__items:hover h2,
+.calculate__items:hover p {
+    color: #FFFFFF;
+}
+
+.lang-list {
+    position: absolute;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+details summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: 'HelveticaNeueCyr';
+    font-weight: 550;
+    color: #7044CC;
+}
+
+
+.wrapper{
+    position: relative;
+}
+.bg-left{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: -1px;
+}
+.bg-right{
+    position: absolute;
+    top: 0px;
+    right: 0;
+     z-index: -1px;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden; /* Rasmlar ekrandan chiqib ketsa, scroll bar chiqib qolmasligi uchun */
+}
+
+.bg-right, .bg-left {
+    pointer-events: none; /* Rasmlar tugmalarni bosishga xalaqit bermasligi uchun */
+    will-change: transform; /* Animatsiya silliq chiqishi uchun */
+}
