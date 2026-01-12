@@ -233,3 +233,64 @@ details summary {
     pointer-events: none; /* Rasmlar tugmalarni bosishga xalaqit bermasligi uchun */
     will-change: transform; /* Animatsiya silliq chiqishi uchun */
 }
+
+/* --- RESPONSIVE --- */
+
+/* Planshetlar uchun (1024px dan kichik) */
+@media (max-width: 1024px) {
+    .hero__container h1 {
+        font-size: 60px;
+        width: 100%;
+    }
+    .first {
+        gap: 30px;
+    }
+    nav {
+        gap: 20px;
+    }
+}
+
+/* Kichik planshet va katta telefonlar (768px dan kichik) */
+@media (max-width: 768px) {
+    .header__container {
+        padding: 15px 0;
+    }
+    nav {
+        display: none; /* Mobil menyu yasaguningizcha yashirib turamiz */
+    }
+    .hero__container h1 {
+        font-size: 45px;
+    }
+    .calculate__list {
+        flex-direction: column; /* Bloklarni ustma-ust qo'yish */
+        align-items: center;
+        gap: 20px;
+    }
+    .calculate__items {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+    .bg-right, .bg-left {
+        width: 50%; /* Mobil ekranda rasmlar juda katta bo'lmasligi uchun */
+    }
+}
+
+/* Telefonlar uchun (480px dan kichik) */
+@media (max-width: 480px) {
+    .hero__container h1 {
+        font-size: 35px;
+    }
+    .hero__container button {
+        width: 100%; /* Tugma to'liq ekranni egallaydi */
+        height: 70px;
+    }
+    .hero__container button i {
+        width: 56px;
+        height: 56px;
+    }
+    .header__container button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
